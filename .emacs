@@ -19,3 +19,4 @@
 (global-display-line-numbers-mode 1)
 (add-hook 'vterm-mode-hook (lambda () (display-line-numbers-mode 0)))
 (tool-bar-mode -1)
+(put 'upcase-region 'disabled nil)
