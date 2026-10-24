@@ -39,4 +39,14 @@
 (use-package vterm
   :defer t)                             ; se carga recién al abrir M-x vterm
 
+;;; ---------------------------------------------------------------
+;;; 7. Evil: emulación de Vim
+;;; ---------------------------------------------------------------
+(use-package evil
+  :init
+  (setq evil-want-integration t
+        evil-want-keybinding nil
+        evil-want-C-u-scroll t)
+  :config
+  (evil-mode 1))
 ;;; init.el ends here
