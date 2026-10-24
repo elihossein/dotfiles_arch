@@ -34,32 +34,9 @@
 (put 'upcase-region 'disabled nil)      ; C-x C-u
 
 ;;; ---------------------------------------------------------------
-;;; 5. Autocompletado: Corfu
-;;; ---------------------------------------------------------------
-(use-package corfu
-  :custom
-  (corfu-auto t)
-  (corfu-auto-delay 0.1)
-  (corfu-auto-prefix 2)
-  (corfu-cycle t)
-  (corfu-preselect 'prompt)
-  :init
-  (global-corfu-mode 1))
-
-;;; ---------------------------------------------------------------
 ;;; 6. Terminal: vterm
 ;;; ---------------------------------------------------------------
 (use-package vterm
   :defer t)                             ; se carga recién al abrir M-x vterm
-
-;;; ---------------------------------------------------------------
-;;; 7. Programación: Eglot + Python (Pyright)
-;;; ---------------------------------------------------------------
-(use-package eglot
-  :ensure nil                           ; viene con Emacs, no se instala
-  :hook ((python-mode python-ts-mode) . eglot-ensure)
-  :config
-  (add-to-list 'eglot-server-programs
-               '((python-mode python-ts-mode) . ("pyright-langserver" "--stdio"))))
 
 ;;; init.el ends here
