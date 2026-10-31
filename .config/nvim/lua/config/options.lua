@@ -22,13 +22,24 @@ vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
 
 -- Iconos de diagnósticos LSP
+--vim.diagnostic.config({
+--   signs = {
+--      text = {
+--            [vim.diagnostic.severity.ERROR] = "✘",
+--            [vim.diagnostic.severity.WARN]  = "▲",
+--            [vim.diagnostic.severity.INFO]  = "●",
+--            [vim.diagnostic.severity.HINT]  = "◆",
+--        },
+--    },
+--})
+--
 vim.diagnostic.config({
-    signs = {
-        text = {
-            [vim.diagnostic.severity.ERROR] = "✘",
-            [vim.diagnostic.severity.WARN]  = "▲",
-            [vim.diagnostic.severity.INFO]  = "●",
-            [vim.diagnostic.severity.HINT]  = "◆",
-        },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "\u{f057}", -- círculo con X (nf-fa-circle_xmark)
+      [vim.diagnostic.severity.WARN]  = "\u{f071}", -- triángulo con ! (nf-fa-triangle_exclamation)
+      [vim.diagnostic.severity.INFO]  = "\u{f05a}", -- círculo con i
+      [vim.diagnostic.severity.HINT]  = "\u{f0eb}", -- lamparita
     },
+  },
 })
