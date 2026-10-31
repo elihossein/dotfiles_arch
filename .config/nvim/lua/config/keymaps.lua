@@ -28,3 +28,12 @@ vim.keymap.set("n", "<leader>a", vim.diagnostic.open_float)
 
 -- Lista de diagnósticos
 vim.keymap.set("n", "<leader>s", vim.diagnostic.setloclist)
+
+-- Ir a la declaración
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+
+-- Ir a la definición
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+
+-- Mostrar documentación
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
