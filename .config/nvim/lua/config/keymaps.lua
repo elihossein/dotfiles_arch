@@ -17,6 +17,12 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
+-- Abrir terminal
+map("n", "<C-t>", "<cmd>sp|term<cr>")
+
+-- Salir del modo insert de terminal
+map("t", "<Esc>", [[<C-\><C-n>]])
+
 -- Mostrar información del diagnóstico
 vim.keymap.set("n", "<leader>a", vim.diagnostic.open_float)
 
