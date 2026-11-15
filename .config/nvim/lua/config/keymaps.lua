@@ -17,6 +17,10 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
+-- Moverse entre buffers
+map("n", "<C-n>", "<cmd>bn")
+map("n", "<C-p>", "<cmd>bp")
+
 -- Abrir terminal
 map("n", "<C-t>", "<cmd>sp|term<cr>")
 
