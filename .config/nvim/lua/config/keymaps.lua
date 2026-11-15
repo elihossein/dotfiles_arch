@@ -21,9 +21,6 @@ map("n", "<C-l>", "<C-w>l")
 map("n", "<C-n>", "<cmd>bn<CR>")
 map("n", "<C-p>", "<cmd>bp<CR>")
 
--- Eliminar buffer
-map("n", "<C-k>", "<cmd>bd<CR>")
-
 -- Abrir terminal
 map("n", "<C-t>", "<cmd>sp|term<cr>")
 
